@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Demir Resim</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Demir Resim", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Ana Sayfa","Index","Home",new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Yeni Resimler", "YeniResimler", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Eski Resimler", "EskiResimler", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("İletişim", "İletisim", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                
+            </div>
+            <div class="nav navbar-nav navbar-right col-md-4" style="margin-top:10px;">
+                <div class="col-md-3">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">TR <span class="caret"></span></button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-lg-1 col-md-1 col-sm-1 col-xs-4" style="margin-top:0px;">
+                    <a href="#"><img src="~/img/arama-ikon.png" /></a>
+                </div>
+
+                <div class=" col-lg-1 col-md-1" style="margin-top:0px;">
+                   
+                    
+                     <a href=" @Url.Action("UyeGiris","Home")"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAADdAAAA3QFwU6IHAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAKVQTFRF////AP//VaqqM8yZK6qqJLa2O8SdLcOlNryhM7+mMcKqMbqnMMGlMsGoMbykMrymM7ylM76nMb6nMr+mMb2nMb6lMr2nMb+lM76mMb6mMb6nMr+nMr6lMr6mM76mMr6mMr+mMr2nMr6mMr6lMb+mMr6mMb6mMr6mMr6mMr2mM76mMr6mMb6mMr6mMr6mMr6mMr6mMr6mMr6mMr6mMr6mMr6mMr6myctW/gAAADZ0Uk5TAAEDBQYHDRETFBUaJSkqLkFLTlxdXmV3foGCk5SYoamys7S5usHJy9XW2ebo7O/x+Pn6+/3+4oISuAAAANFJREFUGBmdwVW2wkAUBMDG3QluwZ0QSO9/aZxD8vLmjvxQBVVz7F8u/rgJu+ww4FcwzMIit2Nql4NpRMUIhlZIRdiCbkZhBt2ewh6afEAhyEMqRhSiIjQnCifoFhQW0HUpdGFYUrGEqXpl6lqFRc1nwq/Brre9k/dtD26Zej2D35UH6+PjcVwPyrApTUMmwmkJhs6NilsHGu9F4eVBaEfURG0oCmcazgX8m9BiglTjSYtnA382tNogUXnT6l1BrE8HD7E5HeaIreiwQuxAhwOAD8COZMxK16IpAAAAAElFTkSuQmCC"/>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        
+        <hr />
+        <footer>
+            <div class="panel panel-default" style="background-color:cornflowerblue;">
+                <div class="panel-body">
+
+                    <div class="col-lg-2">
+       
+                        <p style="margin-top:10px;">&copy; @DateTime.Now.Year -DemirResim</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        
+                    </div>
+
+                    <div class="col-lg-2">
+                        
+                    </div>
+
+
+                    <div class="col-lg-1">
+                        <img src="~/img/email.png" />
+                    </div>
+                    <div class="col-lg-1">
+                        <h5 style="margin-left:5px;">DemirResim@gmail.com</h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </footer>
+            </div>
+        
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
